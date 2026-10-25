@@ -1,0 +1,7 @@
+# OS clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Preview output from tools/squiggle.py --svg
+/svg-preview/

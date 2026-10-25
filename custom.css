@@ -1,0 +1,377 @@
+/* ==========================================================================
+   "Sticker Book" — a cartoony theme for Mainsail
+   Chunky hand-drawn outlines, hard offset shadows, pastel panels,
+   bouncy buttons, slightly askew panels.
+   Works in both Mainsail modes (Settings > UI-Settings > Mode):
+     light = cream paper + ink outlines, dark = plum night + chalk outlines.
+   All colours live in the two variable blocks below.
+   ========================================================================== */
+
+/* Fredoka lives next to this file (fredoka.woff2, one variable-weight file),
+   so the theme works without internet access.
+   Font licence: SIL Open Font License 1.1, see fredoka-OFL.txt */
+@font-face {
+  font-family: 'Fredoka';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('fredoka.woff2') format('woff2-variations'),
+       url('fredoka.woff2') format('woff2');
+}
+
+/* ---------- Shared (both modes) ---------- */
+.v-application {
+  --pink:       #ffb3c7;
+  --peach:      #ffd0a8;
+  --butter:     #ffe98a;
+  --mint:       #b6f0c8;
+  --sky:        #a9dcff;
+  --lilac:      #d3c2ff;
+  --tomato:     #ff6b6b;
+  --on-pastel:  #2b2340;   /* text/icons on pastel headers & buttons */
+  --line-w:     2.5px;
+  --round:      18px;
+}
+
+/* ---------- Light mode: cream paper, ink outlines ---------- */
+.v-application.theme--light {
+  --paper:        #fff8ec;
+  --dots:         rgba(43, 35, 64, 0.08);
+  --card:         #ffffff;
+  --text:         #2b2340;
+  --outline:      #2b2340;
+  --shadow:       #2b2340;
+  --row-hover:    #fff2c4;
+  --track:        rgba(43, 35, 64, 0.12);
+  --divider:      rgba(43, 35, 64, 0.2);
+  --primary-text: #2f7fc1;
+  --success-text: #23955a;
+  --warning-text: #c98a00;
+  --error-text:   #e04545;
+  --sq-fill:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C71.78 30.76 70.43 31.52 70.70 32.29 C70.97 33.05 73.47 33.81 73.60 34.57 C73.73 35.33 71.53 36.10 71.50 36.86 C71.47 37.62 73.58 38.38 73.40 39.14 C73.22 39.90 70.48 40.67 70.40 41.43 C70.32 42.19 72.63 42.95 72.90 43.71 C73.17 44.48 72.15 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.25 45.24 9.65 44.48 9.50 43.71 C9.35 42.95 7.62 42.19 7.10 41.43 C6.58 40.67 6.05 39.90 6.40 39.14 C6.75 38.38 9.05 37.62 9.20 36.86 C9.35 36.10 7.27 35.33 7.30 34.57 C7.33 33.81 9.28 33.05 9.40 32.29 C9.52 31.52 8.23 30.76 8.00 30.00 Z' transform='translate(4 4)' fill='%232b2340'/%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C71.78 30.76 70.43 31.52 70.70 32.29 C70.97 33.05 73.47 33.81 73.60 34.57 C73.73 35.33 71.53 36.10 71.50 36.86 C71.47 37.62 73.58 38.38 73.40 39.14 C73.22 39.90 70.48 40.67 70.40 41.43 C70.32 42.19 72.63 42.95 72.90 43.71 C73.17 44.48 72.15 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.25 45.24 9.65 44.48 9.50 43.71 C9.35 42.95 7.62 42.19 7.10 41.43 C6.58 40.67 6.05 39.90 6.40 39.14 C6.75 38.38 9.05 37.62 9.20 36.86 C9.35 36.10 7.27 35.33 7.30 34.57 C7.33 33.81 9.28 33.05 9.40 32.29 C9.52 31.52 8.23 30.76 8.00 30.00 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  --sq-line:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C71.78 30.76 70.43 31.52 70.70 32.29 C70.97 33.05 73.47 33.81 73.60 34.57 C73.73 35.33 71.53 36.10 71.50 36.86 C71.47 37.62 73.58 38.38 73.40 39.14 C73.22 39.90 70.48 40.67 70.40 41.43 C70.32 42.19 72.63 42.95 72.90 43.71 C73.17 44.48 72.15 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.25 45.24 9.65 44.48 9.50 43.71 C9.35 42.95 7.62 42.19 7.10 41.43 C6.58 40.67 6.05 39.90 6.40 39.14 C6.75 38.38 9.05 37.62 9.20 36.86 C9.35 36.10 7.27 35.33 7.30 34.57 C7.33 33.81 9.28 33.05 9.40 32.29 C9.52 31.52 8.23 30.76 8.00 30.00 Z' fill='none' stroke='%232b2340' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --sq-fill-flat: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C72.00 30.76 72.00 31.52 72.00 32.29 C72.00 33.05 72.00 33.81 72.00 34.57 C72.00 35.33 72.00 36.10 72.00 36.86 C72.00 37.62 72.00 38.38 72.00 39.14 C72.00 39.90 72.00 40.67 72.00 41.43 C72.00 42.19 72.00 42.95 72.00 43.71 C72.00 44.48 72.00 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.00 45.24 8.00 44.48 8.00 43.71 C8.00 42.95 8.00 42.19 8.00 41.43 C8.00 40.67 8.00 39.90 8.00 39.14 C8.00 38.38 8.00 37.62 8.00 36.86 C8.00 36.10 8.00 35.33 8.00 34.57 C8.00 33.81 8.00 33.05 8.00 32.29 C8.00 31.52 8.00 30.76 8.00 30.00 Z' transform='translate(4 4)' fill='%232b2340'/%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C72.00 30.76 72.00 31.52 72.00 32.29 C72.00 33.05 72.00 33.81 72.00 34.57 C72.00 35.33 72.00 36.10 72.00 36.86 C72.00 37.62 72.00 38.38 72.00 39.14 C72.00 39.90 72.00 40.67 72.00 41.43 C72.00 42.19 72.00 42.95 72.00 43.71 C72.00 44.48 72.00 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.00 45.24 8.00 44.48 8.00 43.71 C8.00 42.95 8.00 42.19 8.00 41.43 C8.00 40.67 8.00 39.90 8.00 39.14 C8.00 38.38 8.00 37.62 8.00 36.86 C8.00 36.10 8.00 35.33 8.00 34.57 C8.00 33.81 8.00 33.05 8.00 32.29 C8.00 31.52 8.00 30.76 8.00 30.00 Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  --sq-line-flat: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C72.00 30.76 72.00 31.52 72.00 32.29 C72.00 33.05 72.00 33.81 72.00 34.57 C72.00 35.33 72.00 36.10 72.00 36.86 C72.00 37.62 72.00 38.38 72.00 39.14 C72.00 39.90 72.00 40.67 72.00 41.43 C72.00 42.19 72.00 42.95 72.00 43.71 C72.00 44.48 72.00 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.00 45.24 8.00 44.48 8.00 43.71 C8.00 42.95 8.00 42.19 8.00 41.43 C8.00 40.67 8.00 39.90 8.00 39.14 C8.00 38.38 8.00 37.62 8.00 36.86 C8.00 36.10 8.00 35.33 8.00 34.57 C8.00 33.81 8.00 33.05 8.00 32.29 C8.00 31.52 8.00 30.76 8.00 30.00 Z' fill='none' stroke='%232b2340' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* ---------- Dark mode: plum night, chalk outlines ---------- */
+.v-application.theme--dark {
+  --paper:        #1d1829;
+  --dots:         rgba(243, 230, 207, 0.07);
+  --card:         #2a2338;
+  --text:         #f3e6cf;
+  --outline:      #f3e6cf;
+  --shadow:       #0e0b16;
+  --row-hover:    rgba(255, 233, 138, 0.12);
+  --track:        rgba(243, 230, 207, 0.18);
+  --divider:      rgba(243, 230, 207, 0.2);
+  --primary-text: #8fcfff;
+  --success-text: #8ee6ad;
+  --warning-text: #ffd75e;
+  --error-text:   #ff8f8f;
+  --sq-fill:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C71.78 30.76 70.43 31.52 70.70 32.29 C70.97 33.05 73.47 33.81 73.60 34.57 C73.73 35.33 71.53 36.10 71.50 36.86 C71.47 37.62 73.58 38.38 73.40 39.14 C73.22 39.90 70.48 40.67 70.40 41.43 C70.32 42.19 72.63 42.95 72.90 43.71 C73.17 44.48 72.15 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.25 45.24 9.65 44.48 9.50 43.71 C9.35 42.95 7.62 42.19 7.10 41.43 C6.58 40.67 6.05 39.90 6.40 39.14 C6.75 38.38 9.05 37.62 9.20 36.86 C9.35 36.10 7.27 35.33 7.30 34.57 C7.33 33.81 9.28 33.05 9.40 32.29 C9.52 31.52 8.23 30.76 8.00 30.00 Z' transform='translate(4 4)' fill='%230e0b16'/%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C71.78 30.76 70.43 31.52 70.70 32.29 C70.97 33.05 73.47 33.81 73.60 34.57 C73.73 35.33 71.53 36.10 71.50 36.86 C71.47 37.62 73.58 38.38 73.40 39.14 C73.22 39.90 70.48 40.67 70.40 41.43 C70.32 42.19 72.63 42.95 72.90 43.71 C73.17 44.48 72.15 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.25 45.24 9.65 44.48 9.50 43.71 C9.35 42.95 7.62 42.19 7.10 41.43 C6.58 40.67 6.05 39.90 6.40 39.14 C6.75 38.38 9.05 37.62 9.20 36.86 C9.35 36.10 7.27 35.33 7.30 34.57 C7.33 33.81 9.28 33.05 9.40 32.29 C9.52 31.52 8.23 30.76 8.00 30.00 Z' fill='%232a2338'/%3E%3C/svg%3E");
+  --sq-line:      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C71.78 30.76 70.43 31.52 70.70 32.29 C70.97 33.05 73.47 33.81 73.60 34.57 C73.73 35.33 71.53 36.10 71.50 36.86 C71.47 37.62 73.58 38.38 73.40 39.14 C73.22 39.90 70.48 40.67 70.40 41.43 C70.32 42.19 72.63 42.95 72.90 43.71 C73.17 44.48 72.15 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.25 45.24 9.65 44.48 9.50 43.71 C9.35 42.95 7.62 42.19 7.10 41.43 C6.58 40.67 6.05 39.90 6.40 39.14 C6.75 38.38 9.05 37.62 9.20 36.86 C9.35 36.10 7.27 35.33 7.30 34.57 C7.33 33.81 9.28 33.05 9.40 32.29 C9.52 31.52 8.23 30.76 8.00 30.00 Z' fill='none' stroke='%23f3e6cf' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E");
+  --sq-fill-flat: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C72.00 30.76 72.00 31.52 72.00 32.29 C72.00 33.05 72.00 33.81 72.00 34.57 C72.00 35.33 72.00 36.10 72.00 36.86 C72.00 37.62 72.00 38.38 72.00 39.14 C72.00 39.90 72.00 40.67 72.00 41.43 C72.00 42.19 72.00 42.95 72.00 43.71 C72.00 44.48 72.00 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.00 45.24 8.00 44.48 8.00 43.71 C8.00 42.95 8.00 42.19 8.00 41.43 C8.00 40.67 8.00 39.90 8.00 39.14 C8.00 38.38 8.00 37.62 8.00 36.86 C8.00 36.10 8.00 35.33 8.00 34.57 C8.00 33.81 8.00 33.05 8.00 32.29 C8.00 31.52 8.00 30.76 8.00 30.00 Z' transform='translate(4 4)' fill='%230e0b16'/%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C72.00 30.76 72.00 31.52 72.00 32.29 C72.00 33.05 72.00 33.81 72.00 34.57 C72.00 35.33 72.00 36.10 72.00 36.86 C72.00 37.62 72.00 38.38 72.00 39.14 C72.00 39.90 72.00 40.67 72.00 41.43 C72.00 42.19 72.00 42.95 72.00 43.71 C72.00 44.48 72.00 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.00 45.24 8.00 44.48 8.00 43.71 C8.00 42.95 8.00 42.19 8.00 41.43 C8.00 40.67 8.00 39.90 8.00 39.14 C8.00 38.38 8.00 37.62 8.00 36.86 C8.00 36.10 8.00 35.33 8.00 34.57 C8.00 33.81 8.00 33.05 8.00 32.29 C8.00 31.52 8.00 30.76 8.00 30.00 Z' fill='%232a2338'/%3E%3C/svg%3E");
+  --sq-line-flat: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath d='M8 26 A17 19 0 0 1 26 8 L30 8 C30.76 7.75 31.52 6.32 32.29 6.50 C33.05 6.68 33.81 9.13 34.57 9.10 C35.33 9.07 36.10 6.38 36.86 6.30 C37.62 6.22 38.38 8.52 39.14 8.60 C39.90 8.68 40.67 6.67 41.43 6.80 C42.19 6.93 42.95 9.20 43.71 9.40 C44.48 9.60 45.24 8.23 46.00 8.00 L54 8 A19 17 0 0 1 72 26 L72 30 C72.00 30.76 72.00 31.52 72.00 32.29 C72.00 33.05 72.00 33.81 72.00 34.57 C72.00 35.33 72.00 36.10 72.00 36.86 C72.00 37.62 72.00 38.38 72.00 39.14 C72.00 39.90 72.00 40.67 72.00 41.43 C72.00 42.19 72.00 42.95 72.00 43.71 C72.00 44.48 72.00 45.24 72.00 46.00 L72 54 A18 16 0 0 1 54 72 L46 72 C45.24 72.20 44.48 73.47 43.71 73.20 C42.95 72.93 42.19 70.47 41.43 70.40 C40.67 70.33 39.90 72.28 39.14 72.80 C38.38 73.32 37.62 73.80 36.86 73.50 C36.10 73.20 35.33 71.03 34.57 71.00 C33.81 70.97 33.05 73.13 32.29 73.30 C31.52 73.47 30.76 72.22 30.00 72.00 L26 72 A16 18 0 0 1 8 54 L8 46 C8.00 45.24 8.00 44.48 8.00 43.71 C8.00 42.95 8.00 42.19 8.00 41.43 C8.00 40.67 8.00 39.90 8.00 39.14 C8.00 38.38 8.00 37.62 8.00 36.86 C8.00 36.10 8.00 35.33 8.00 34.57 C8.00 33.81 8.00 33.05 8.00 32.29 C8.00 31.52 8.00 30.76 8.00 30.00 Z' fill='none' stroke='%23f3e6cf' stroke-width='3' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* ---------- Base page ---------- */
+.v-application,
+.v-application .v-main {
+  font-family: 'Fredoka', system-ui, sans-serif !important;
+}
+.v-application.v-application {
+  color: var(--text) !important;
+  background-color: var(--paper) !important;
+  background-image: radial-gradient(var(--dots) 1.5px, transparent 1.5px) !important;
+  background-size: 22px 22px !important;
+}
+.v-application [class*="text-h"], .v-application [class*="text-subtitle"],
+.v-application [class*="text-body"], .v-application .text-caption,
+.v-application .text-button, .v-application .text-overline {
+  font-family: 'Fredoka', system-ui, sans-serif !important;
+}
+
+/* ---------- Panels: hand-drawn stickers ----------
+   The outline and its hard shadow are SVG images drawn over/behind each
+   panel (see --sq-* above), so text and controls inside are never distorted. */
+.v-application .panel {
+  --panel-colour: var(--sky);   /* default for any panel not listed below */
+  --tilt: 0.4deg;               /* default tilt for any panel not listed below */
+}
+.v-application .panel.v-card {
+  background: var(--card) !important;   /* backing under the drawing, hides any seams */
+  color: var(--text) !important;
+  border: 0 !important;
+  border-radius: var(--round) !important;
+  box-shadow: none !important;           /* shadow comes from the ::before drawing */
+  overflow: visible !important;
+  position: relative;
+  transform: rotate(var(--tilt));
+  transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1); /* springy */
+  /* draw the panel flat, then rotate the finished image —
+     stops 1px seams appearing in the outline while tilted */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+/* straighten up while you're using a panel */
+.v-application .panel.v-card:hover,
+.v-application .panel.v-card:focus-within {
+  transform: rotate(0deg);
+}
+.v-application .panel.v-card::before,
+.v-application .panel.v-card::after {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  pointer-events: none;
+  border: 30px solid transparent;
+}
+/* wobbly fill + offset hard shadow, behind the panel's contents */
+.v-application .panel.v-card::before {
+  z-index: -1;
+  border-image: var(--sq-fill) 30 fill stretch;
+}
+/* wobbly outline, on top */
+.v-application .panel.v-card::after {
+  z-index: 6;
+  border-image: var(--sq-line) 30 stretch;
+}
+/* collapsed panels are too short for wobbly sides, so give them straight ones */
+.v-application .panel:has(> .panel-toolbar + div[style*="display: none"])::before {
+  border-image: var(--sq-fill-flat) 30 fill stretch;
+}
+.v-application .panel:has(> .panel-toolbar + div[style*="display: none"])::after {
+  border-image: var(--sq-line-flat) 30 stretch;
+}
+
+.v-application .panel > .panel-toolbar {
+  background-color: var(--panel-colour) !important;
+  border-bottom: var(--line-w) solid var(--outline) !important;
+  border-radius: var(--round) var(--round) 0 0 !important;
+}
+.v-application .panel:has(> .panel-toolbar + div[style*="display: none"]) > .panel-toolbar {
+  border-radius: var(--round) !important;
+  border-bottom: 0 !important;
+}
+.v-application .panel > .panel-toolbar,
+.v-application .panel > .panel-toolbar .v-toolbar__title,
+.v-application .panel > .panel-toolbar .v-icon,
+.v-application .panel > .panel-toolbar .v-btn {
+  color: var(--on-pastel) !important;
+  font-weight: 600 !important;
+}
+.v-application .panel > .panel-toolbar .v-toolbar__title {
+  font-size: 1.05rem !important;
+  letter-spacing: 0.02em;
+}
+
+/* Each panel gets its own colour and its own little tilt */
+.v-application .panel.status-panel             { --panel-colour: var(--pink);   --tilt: -0.6deg; }
+.v-application .panel.webcam-panel             { --panel-colour: var(--pink);   --tilt:  0.5deg; }
+.v-application .panel.toolhead-control-panel   { --panel-colour: var(--sky);    --tilt:  0.7deg; }
+.v-application .panel.extruder-control-panel   { --panel-colour: var(--peach);  --tilt: -0.5deg; }
+.v-application .panel.temperature-panel        { --panel-colour: var(--butter); --tilt: -0.4deg; }
+.v-application .panel.machine-settings-panel   { --panel-colour: var(--lilac);  --tilt:  0.6deg; }
+.v-application .panel.miscellaneous-panel      { --panel-colour: var(--mint);   --tilt: -0.7deg; }
+.v-application .panel.miniconsole-panel        { --panel-colour: var(--lilac);  --tilt:  0.4deg; }
+.v-application .panel.macros-panel             { --panel-colour: var(--mint);   --tilt: -0.5deg; }
+
+@media (prefers-reduced-motion: reduce) {
+  .v-application .panel.v-card { transition: none; }
+}
+
+/* cards nested inside panels / pages without the panel wrapper */
+.v-application .v-card:not(.panel):not(.v-card--flat) {
+  border: 2px solid var(--outline) !important;
+  border-radius: 14px !important;
+  box-shadow: 2px 2px 0 var(--shadow) !important;
+}
+
+/* ---------- Top bar ---------- */
+.v-application .topbar.v-app-bar {
+  background-color: var(--butter) !important;
+  border-bottom: var(--line-w) solid var(--outline) !important;
+  box-shadow: 0 3px 0 var(--shadow) !important;
+}
+.v-application .topbar,
+.v-application .topbar .v-icon,
+.v-application .topbar .v-btn,
+.v-application .topbar .v-toolbar__title {
+  color: var(--on-pastel) !important;
+}
+.v-application .topbar .v-toolbar__title {
+  font-weight: 700 !important;
+  font-size: 1.4rem !important;
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+/* ---------- Sidebar ---------- */
+.v-application .v-navigation-drawer {
+  background-color: var(--card) !important;
+  border-right: var(--line-w) solid var(--outline) !important;
+}
+.v-application .v-navigation-drawer__border { display: none; }
+
+.v-application .v-navigation-drawer .v-list-item {
+  margin: 4px 8px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+.v-application .v-navigation-drawer .v-list-item,
+.v-application .v-navigation-drawer .v-list-item .v-icon {
+  color: var(--text) !important;
+}
+.v-application .v-navigation-drawer .v-list-item:hover {
+  background-color: var(--mint);
+  border-color: var(--outline);
+  transform: rotate(-1.5deg) scale(1.03);
+}
+.v-application .v-navigation-drawer .v-list-item--active {
+  background-color: var(--pink) !important;
+  border-color: var(--outline) !important;
+  box-shadow: 2px 2px 0 var(--shadow);
+}
+.v-application .v-navigation-drawer .v-list-item:hover,
+.v-application .v-navigation-drawer .v-list-item:hover .v-icon,
+.v-application .v-navigation-drawer .v-list-item--active,
+.v-application .v-navigation-drawer .v-list-item--active .v-icon {
+  color: var(--on-pastel) !important;
+}
+.v-application .v-navigation-drawer .v-list-item--active::before { opacity: 0 !important; }
+
+/* ---------- Buttons: squishy ---------- */
+.v-application .v-btn:not(.v-btn--icon):not(.v-btn--text):not(.v-btn--plain) {
+  border: 2px solid var(--outline) !important;
+  border-radius: 12px !important;
+  box-shadow: 2px 2px 0 var(--shadow) !important;
+  font-family: 'Fredoka', system-ui, sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.02em !important;
+  transition: transform 0.08s ease, box-shadow 0.08s ease !important;
+}
+.v-application .v-btn:not(.v-btn--icon):not(.v-btn--text):not(.v-btn--plain):hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--shadow) !important;
+}
+.v-application .v-btn:not(.v-btn--icon):not(.v-btn--text):not(.v-btn--plain):active {
+  transform: translate(2px, 2px);
+  box-shadow: 0 0 0 var(--shadow) !important;
+}
+/* button groups (jog controls etc.) — chunky but joined */
+.v-application .v-btn-toggle,
+.v-application .v-item-group.v-btn-toggle {
+  border: 2px solid var(--outline) !important;
+  border-radius: 12px !important;
+  box-shadow: 2px 2px 0 var(--shadow) !important;
+  overflow: hidden;
+}
+.v-application .v-btn-toggle > .v-btn.v-btn {
+  border: 0 !important;
+  border-right: 2px solid var(--outline) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+.v-application .v-btn-toggle > .v-btn.v-btn:last-child { border-right: 0 !important; }
+
+/* ---------- Colour roles ---------- */
+.v-application .primary   { background-color: var(--sky)    !important; border-color: var(--outline) !important; }
+.v-application .secondary { background-color: var(--lilac)  !important; }
+.v-application .success   { background-color: var(--mint)   !important; }
+.v-application .warning   { background-color: var(--butter) !important; }
+.v-application .error     { background-color: var(--tomato) !important; }
+.v-application .info      { background-color: var(--sky)    !important; }
+
+.v-application .v-btn.primary,
+.v-application .v-btn.secondary,
+.v-application .v-btn.success,
+.v-application .v-btn.warning,
+.v-application .v-btn.info,
+.v-application .v-btn.primary .v-icon,
+.v-application .v-btn.secondary .v-icon,
+.v-application .v-btn.success .v-icon,
+.v-application .v-btn.warning .v-icon,
+.v-application .v-btn.info .v-icon {
+  color: var(--on-pastel) !important;
+}
+.v-application .v-btn.error { color: #fff !important; }
+
+.v-application .primary--text { color: var(--primary-text) !important; caret-color: var(--primary-text) !important; }
+.v-application .success--text { color: var(--success-text) !important; }
+.v-application .warning--text { color: var(--warning-text) !important; }
+.v-application .error--text   { color: var(--error-text) !important; }
+
+/* ---------- Inputs ---------- */
+.v-application .v-text-field--outlined fieldset {
+  border: 2px solid var(--outline) !important;
+  border-radius: 12px !important;
+}
+/* Vuetify's soft elevation shadow (e.g. console input) has square-ish corners that poke past the outline */
+.v-application .v-text-field .v-input__slot {
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+.v-application .v-text-field--outlined.v-input--is-focused fieldset {
+  border-color: var(--primary-text) !important;
+}
+
+/* ---------- Sliders & progress ---------- */
+.v-application .v-slider__track-container {
+  height: 8px !important;
+  border-radius: 8px;
+  border: 2px solid var(--outline);
+  overflow: hidden;
+}
+.v-application .v-slider__track-background {
+  background-color: var(--track) !important;
+}
+.v-application .v-slider__thumb {
+  width: 20px !important;
+  height: 20px !important;
+  left: -10px !important;
+  border: 2.5px solid var(--outline) !important;
+  background-color: var(--butter) !important;
+}
+.v-application .v-slider__thumb::before { display: none; }
+
+.v-application .v-progress-linear {
+  border: 2px solid var(--outline);
+  border-radius: 10px;
+}
+
+/* ---------- Tables & dividers ---------- */
+.v-application .v-divider { border-color: var(--divider) !important; }
+.v-application .v-data-table > .v-data-table__wrapper > table > tbody > tr:hover:not(.v-data-table__expanded__content) {
+  background-color: var(--row-hover) !important;
+}
+
+/* ---------- Dialogs ---------- */
+.v-application .v-dialog > .v-card:not(.panel) {
+  border: var(--line-w) solid var(--outline) !important;
+  border-radius: var(--round) !important;
+  box-shadow: 6px 6px 0 var(--shadow) !important;
+}
+/* panels used as dialogs (e.g. Interface Settings): the hand-drawn outline
+   sits just outside the panel, so let the dialog box show it instead of
+   clipping it / adding a horizontal scrollbar; keep them level */
+.v-application .v-dialog:has(> .panel) {
+  overflow: visible !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.v-application .v-dialog > .panel.v-card {
+  --tilt: 0deg;
+}
+
+/* ---------- Scrollbars ---------- */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: #d3c2ff;
+  border: 2px solid #2b2340;
+  border-radius: 10px;
+}
