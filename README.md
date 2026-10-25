@@ -26,7 +26,7 @@ A light-hearted theme for [Mainsail](https://docs.mainsail.xyz/): pastel panels 
 SSH into your printer and clone the theme into Mainsail's theme folder:
 
 ```sh
-git clone https://github.com/philrennie/mainsail-cartoon-theme ~/printer_data/config/.theme
+git clone https://github.com/philrennie/mainsail-sticker-book ~/printer_data/config/.theme
 ```
 
 > If you already have a `.theme` folder, move it out of the way first (for example `mv ~/printer_data/config/.theme ~/printer_data/config/.theme.bak`) — git won't clone into a folder that isn't empty.
@@ -58,7 +58,7 @@ If you installed with git, you can let Moonraker keep the theme up to date. Add 
 type: git_repo
 channel: dev
 path: ~/printer_data/config/.theme
-origin: https://github.com/philrennie/mainsail-cartoon-theme
+origin: https://github.com/philrennie/mainsail-sticker-book
 primary_branch: main
 ```
 
