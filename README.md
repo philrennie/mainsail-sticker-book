@@ -56,7 +56,7 @@ If you installed with git, you can probably let Moonraker keep the theme up to d
 ```ini
 [update_manager mainsail-sticker-book]
 type: git_repo
-channel: dev
+channel: stable
 path: ~/printer_data/config/.theme
 origin: https://github.com/philrennie/mainsail-sticker-book
 primary_branch: main
