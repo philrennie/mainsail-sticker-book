@@ -1,4 +1,4 @@
-# Sticker Book — a cartoony theme for Mainsail
+# Sticker Book - a cartoony theme for Mainsail
 
 A light-hearted theme for [Mainsail](https://docs.mainsail.xyz/): pastel panels that look like stickers slapped on a page, hand-drawn wobbly outlines, chunky hard shadows, squishy buttons and a friendly rounded font. Works in both **light** and **dark** mode.
 
@@ -6,12 +6,12 @@ A light-hearted theme for [Mainsail](https://docs.mainsail.xyz/): pastel panels 
 
 ## Features
 
-- **Hand-drawn outlines** — every panel has a slightly wobbly ink outline with a matching wobbly hard shadow
-- **Slightly askew** — panels sit at a small tilt and spring level when you hover over or use them
-- **Sticker colours** — each dashboard panel gets its own pastel header (pink, sky, peach, butter, lilac, mint)
-- **Light and dark** — cream paper with ink outlines, or a plum night with chalk outlines; follows Mainsail's Mode setting
-- **Squishy buttons** — chunky outlined buttons that press down when clicked
-- **Offline-friendly** — the [Fredoka](https://github.com/hafontia/Fredoka-One) font ships with the theme, no Google Fonts requests
+- **'Hand-drawn outlines'** - every panel has a slightly wobbly ink outline with a matching wobbly hard shadow
+- **Slightly askew** - panels sit at a small tilt and spring level when you hover over or use them
+- **Sticker colours** - each dashboard panel gets its own pastel header (pink, sky, peach, butter, lilac, mint)
+- **Light and dark** - cream paper with ink outlines, or a plum night with chalk outlines; follows Mainsail's Mode setting
+- **Squishy buttons** - chunky outlined buttons that press down when clicked
+- **Offline-friendly** - the [Fredoka](https://github.com/hafontia/Fredoka-One) font ships with the theme, no Google Fonts requests
 
 ## Screenshots
 
@@ -29,7 +29,7 @@ SSH into your printer and clone the theme into Mainsail's theme folder:
 git clone https://github.com/philrennie/mainsail-sticker-book ~/printer_data/config/.theme
 ```
 
-> If you already have a `.theme` folder, move it out of the way first (for example `mv ~/printer_data/config/.theme ~/printer_data/config/.theme.bak`) — git won't clone into a folder that isn't empty.
+> If you already have a `.theme` folder, move it out of the way first (for example `mv ~/printer_data/config/.theme ~/printer_data/config/.theme.bak`) - git won't clone into a folder that isn't empty.
 
 Then reload Mainsail with a hard refresh (**Ctrl+Shift+F5**, or **Cmd+Shift+R** on macOS).
 
@@ -47,11 +47,11 @@ Then reload Mainsail with a hard refresh (**Ctrl+Shift+F5**, or **Cmd+Shift+R** 
 
 ### Light or dark
 
-Pick either under **Settings → UI-Settings → Mode** — the theme adapts automatically. The **Primary** colour setting is mostly overridden by the theme's pastels; the **Logo** colour still tints the Mainsail logo in the top bar, so pick whatever looks good against the butter-yellow bar (a dark ink such as `43, 35, 64` works well).
+Pick either under **Settings → UI-Settings → Mode** - the theme adapts automatically. The **Primary** colour setting is mostly overridden by the theme's pastels; the **Logo** colour still tints the Mainsail logo in the top bar, so pick whatever looks good against the butter-yellow bar (a dark ink such as `43, 35, 64` works well).
 
 ## Updating
 
-If you installed with git, you can let Moonraker keep the theme up to date. Add this to `moonraker.conf`:
+If you installed with git, you can probably let Moonraker keep the theme up to date. Add this to `moonraker.conf`:
 
 ```ini
 [update_manager mainsail-sticker-book]
@@ -72,9 +72,9 @@ Without git, just re-upload the three files.
 
 All colours are CSS variables near the top of `custom.css`:
 
-- **`.v-application`** — the shared pastels (`--pink`, `--sky`, `--butter`, …) and `--on-pastel` (text on pastel headers and buttons)
-- **`.v-application.theme--light`** — light mode: `--paper`, `--card`, `--text`, `--outline`, `--shadow`, …
-- **`.v-application.theme--dark`** — the same set for dark mode
+- **`.v-application`** - the shared pastels (`--pink`, `--sky`, `--butter`, …) and `--on-pastel` (text on pastel headers and buttons)
+- **`.v-application.theme--light`** - light mode: `--paper`, `--card`, `--text`, `--outline`, `--shadow`, …
+- **`.v-application.theme--dark`** - the same set for dark mode
 
 Each dashboard panel's header colour and tilt are set per panel:
 
@@ -88,7 +88,7 @@ Some common tweaks:
 |---|---|
 | Change a panel's colour | Edit its `--panel-colour` line |
 | Turn off the tilt | Add `.v-application .panel.v-card { --tilt: 0deg !important; }` at the end of the file |
-| Colour a panel that isn't listed | Add a line using the panel's class, e.g. `.v-application .panel.webcam-panel { … }` — inspect the panel to find its `*-panel` class |
+| Colour a panel that isn't listed | Add a line using the panel's class, e.g. `.v-application .panel.webcam-panel { … }` - inspect the panel to find its `*-panel` class |
 
 ### Changing the outline colours
 
@@ -114,6 +114,6 @@ It prints four replacement lines to paste over the existing `--sq-*` lines in th
 
 ## Credits and licence
 
-- Theme: MIT licence — see [LICENSE](LICENSE).
-- Font: [Fredoka](https://github.com/hafontia/Fredoka-One) by The Fredoka Project Authors, via [Fontsource](https://fontsource.org/fonts/fredoka) (`@fontsource-variable/fredoka` 5.3.0, Latin subset). Licensed under the SIL Open Font License 1.1 — see [fredoka-OFL.txt](fredoka-OFL.txt).
+- Theme: MIT licence - see [LICENSE](LICENSE).
+- Font: [Fredoka](https://github.com/hafontia/Fredoka-One) by The Fredoka Project Authors, via [Fontsource](https://fontsource.org/fonts/fredoka) (`@fontsource-variable/fredoka` 5.3.0, Latin subset). Licensed under the SIL Open Font License 1.1 - see [fredoka-OFL.txt](fredoka-OFL.txt).
 - Dark/light variable structure inspired by [mainsail-printables](https://github.com/8bitmcu/mainsail-printables).
